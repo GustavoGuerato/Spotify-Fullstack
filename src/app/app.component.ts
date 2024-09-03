@@ -11,15 +11,17 @@ import { fontAwesomeIcons } from './shared/font-awesome-icons';
   standalone: true,
   imports: [RouterOutlet, FontAwesomeModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title = 'spotify-clone-front';
 
-  private faIconLibrary: FaIconLibrary = inject(FaIconLibrary);
+  private faIconLibrary = inject(FaIconLibrary);
+
   ngOnInit(): void {
     this.initFontAwesome();
   }
+
   private initFontAwesome(): void {
     this.faIconLibrary.addIcons(...fontAwesomeIcons);
   }
