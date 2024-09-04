@@ -5,11 +5,12 @@ import {
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
 import { fontAwesomeIcons } from './shared/font-awesome-icons';
+import { NavigationComponent } from "./layout/navigation/navigation.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule],
+  imports: [RouterOutlet, FontAwesomeModule, NavigationComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
